@@ -1,0 +1,42 @@
+﻿/* Base */
+:root {
+  --bg: #0b1020;
+  --card: #121933;
+  --text: #e6ebff;
+  --muted: #9aa7cc;
+  --primary: #4f7cff;
+  --primary-contrast: #ffffff;
+  --border: #26345c;
+  --success: #22c55e;
+  --error: #ef4444;
+}
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
+  background: radial-gradient(1200px 600px at 10% -10%, rgba(79,124,255,0.25) 0%, rgba(79,124,255,0) 50%),
+              radial-gradient(800px 500px at 110% 10%, rgba(34,197,94,0.18) 0%, rgba(34,197,94,0) 50%),
+              var(--bg);
+  color: var(--text);
+}
+.container { max-width: 720px; margin: 0 auto; padding: 24px; }
+header h1 { margin: 16px 0 8px; font-weight: 700; }
+.card {
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.0));
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+}
+.field { margin-bottom: 14px; }
+.field label { display: block; font-size: 14px; color: var(--muted); margin-bottom: 6px; }
+.field input { width: 100%; padding: 10px 12px; border-radius: 10px; border: 1px solid var(--border); background: #0e1530; color: var(--text); }
+.actions { display: flex; gap: 12px; margin-top: 12px; flex-wrap: wrap; }
+.btn { appearance: none; border: 1px solid var(--border); background: #0e1530; color: var(--text); padding: 10px 14px; border-radius: 10px; cursor: pointer; transition: transform 0.05s ease, background 0.2s ease, border-color 0.2s ease; text-decoration: none; display: inline-block; }
+.btn:hover { transform: translateY(-1px); border-color: #3852a3; }
+.btn.primary { background: var(--primary); color: var(--primary-contrast); border-color: rgba(255,255,255,0.08); }
+.btn.primary:hover { filter: brightness(1.05); }
+.message { margin-top: 12px; color: var(--muted); font-size: 14px; }
+.success { color: var(--success); }
+.error { color: var(--error); }
